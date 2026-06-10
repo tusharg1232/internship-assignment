@@ -1,0 +1,59 @@
+body{
+  background:black;
+  color:white;
+  font-family:Arial;
+  padding:20px;
+}
+
+#player{
+  margin-top:20px;
+}
+
+#chapters{
+  margin-top:30px;
+}
+
+#chapterList{
+  list-style:none;
+  padding:0;
+}
+
+#chapterList li{
+
+  background:#222;
+
+  padding:12px;
+
+  margin-bottom:10px;
+
+  border-radius:8px;
+
+  cursor:pointer;
+}
+
+#chapterList li:hover{
+  background:#444;
+}
+.video-buttons{
+
+  display:flex;
+
+  gap:10px;
+
+  margin-bottom:20px;
+}
+
+.video-buttons button{
+
+  padding:10px 20px;
+
+  border:none;
+
+  cursor:pointer;
+
+  background:#ff0000;
+
+  color:white;
+
+  border-radius:6px;
+}

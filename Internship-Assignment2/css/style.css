@@ -1,0 +1,208 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+
+  background-color: #f4e8d8;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+
+.Pri {
+  width: 100%;
+
+  max-width: 1200px;
+
+  padding: 80px 20px;
+
+  text-align: center;
+}
+
+.Pri h2 {
+  font-size: 48px;
+
+  color: #8b2a10;
+
+  margin-bottom: 60px;
+
+  font-weight: 700;
+}
+
+
+
+.slider-container {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.slider {
+  position: relative;
+
+  width: 900px;
+
+  height: 320px;
+
+  perspective: 1200px;
+}
+
+
+
+.card {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 420px;
+
+  height: 260px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  border: 1px solid #e5e5e5;
+
+  transition: all 0.5s ease;
+
+  overflow: hidden;
+}
+
+
+
+.active-card {
+  transform: translate(-50%, -50%) scale(1);
+
+  z-index: 3;
+
+  opacity: 1;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+
+.left-card {
+  transform:
+    translate(-50%, -50%)
+    translateX(-280px)
+    rotateY(40deg)
+    scale(0.85);
+
+  opacity: 0.65;
+
+  z-index: 1;
+}
+
+
+
+.right-card {
+  transform:
+    translate(-50%, -50%)
+    translateX(280px)
+    rotateY(-40deg)
+    scale(0.85);
+
+  opacity: 0.65;
+
+  z-index: 1;
+}
+
+
+
+.card h3 {
+  color: #d85510;
+
+  font-size: 28px;
+
+  font-weight: 800;
+
+  margin-bottom: 12px;
+
+  text-transform: uppercase;
+}
+
+.card p {
+  color: #666;
+
+  font-size: 16px;
+
+  margin-bottom: 10px;
+}
+
+.card span {
+  color: #222;
+
+  font-size: 26px;
+
+  font-weight: 800;
+}
+
+.brand {
+  margin-top: 20px;
+
+  color: #b02a0f;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+
+#prev,
+#next {
+  background: transparent;
+
+  border: none;
+
+  font-size: 48px;
+
+  color: #8b2a10;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+#prev:hover,
+#next:hover {
+  transform: scale(1.2);
+
+  color: #c94918;
+}
+

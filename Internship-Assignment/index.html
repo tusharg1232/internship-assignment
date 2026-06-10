@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Video Lead Generation</title>
+
+  <link
+    rel="stylesheet"
+    href="./css/style.css"
+  />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Video Lead Generation Assignment</h1>
+
+    <!-- YouTube Player -->
+    <div id="player"></div>
+
+    <!-- Lead Form Modal -->
+    <div class="modal" id="leadModal">
+
+      <div class="modal-content">
+
+        <span class="close-btn">&times;</span>
+
+        <h2>Get More Information</h2>
+
+        <p class="modal-text">
+          Fill out the form below and our team will contact you shortly.
+        </p>
+
+       <form id="leadForm">
+
+  <input
+    id="name"
+    type="text"
+    placeholder="Enter Full Name"
+    required
+  >
+
+  <input
+    id="email"
+    type="email"
+    placeholder="Enter Email"
+    required
+  >
+
+  <input
+    id="phone"
+    type="tel"
+    placeholder="Enter Phone Number"
+    required
+  >
+
+  <button type="submit">
+    Get Callback
+  </button>
+
+</form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- YouTube API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <!-- Custom JS -->
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
