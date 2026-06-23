@@ -282,6 +282,8 @@ body {
 @media (max-width: 600px) {
   .slider-container {
     gap: 10px;
+     width: 100%;
+  height: 250px;
   }
 
   .card {
@@ -291,7 +293,60 @@ body {
 
     padding: 20px;
   }
+@media (max-width: 600px) {
 
+  .Pri h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .slider {
+    width: 100%;
+    height: 250px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+    height: 200px;
+    padding: 20px;
+  }
+
+  .left-card,
+  .right-card {
+    display: none;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .card span {
+    font-size: 24px;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+
+  #prev,
+  #next {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+  .left-card,
+  .right-card {
+    display: none;
+  }
+
+}
   .card h3 {
     font-size: 22px;
   }
@@ -306,10 +361,10 @@ body {
 
   #prev,
   #next {
-    width: 45px;
+    width: 40px;
 
-    height: 45px;
+    height: 40px;
 
-    font-size: 22px;
+    font-size: 20px;
   }
 }
