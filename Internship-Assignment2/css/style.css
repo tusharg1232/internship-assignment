@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +9,11 @@
 body {
   font-family: Arial, sans-serif;
 
-  background-color: #f4e8d8;
+  background: linear-gradient(
+    135deg,
+    #f8efe4,
+    #f4e8d8
+  );
 
   min-height: 100vh;
 
@@ -35,13 +37,15 @@ body {
 }
 
 .Pri h2 {
-  font-size: 48px;
+  font-size: 52px;
 
   color: #8b2a10;
 
   margin-bottom: 60px;
 
-  font-weight: 700;
+  font-weight: 800;
+
+  letter-spacing: 1px;
 }
 
 
@@ -53,7 +57,7 @@ body {
 
   justify-content: center;
 
-  gap: 20px;
+  gap: 30px;
 }
 
 .slider {
@@ -63,7 +67,7 @@ body {
 
   height: 320px;
 
-  perspective: 1200px;
+  perspective: 1400px;
 }
 
 
@@ -79,9 +83,13 @@ body {
 
   height: 260px;
 
-  background: white;
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #fafafa
+  );
 
-  border-radius: 20px;
+  border-radius: 24px;
 
   padding: 30px;
 
@@ -95,11 +103,14 @@ body {
 
   text-align: center;
 
-  border: 1px solid #e5e5e5;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 
   transition: all 0.5s ease;
 
   overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -111,8 +122,10 @@ body {
 
   opacity: 1;
 
+  border: 2px solid #d85510;
+
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.18);
+    0 20px 50px rgba(0, 0, 0, 0.18);
 }
 
 
@@ -120,13 +133,15 @@ body {
 .left-card {
   transform:
     translate(-50%, -50%)
-    translateX(-280px)
-    rotateY(40deg)
-    scale(0.85);
+    translateX(-300px)
+    rotateY(35deg)
+    scale(0.82);
 
-  opacity: 0.65;
+  opacity: 0.5;
 
   z-index: 1;
+
+  filter: blur(1px);
 }
 
 
@@ -134,13 +149,15 @@ body {
 .right-card {
   transform:
     translate(-50%, -50%)
-    translateX(280px)
-    rotateY(-40deg)
-    scale(0.85);
+    translateX(300px)
+    rotateY(-35deg)
+    scale(0.82);
 
-  opacity: 0.65;
+  opacity: 0.5;
 
   z-index: 1;
+
+  filter: blur(1px);
 }
 
 
@@ -148,13 +165,15 @@ body {
 .card h3 {
   color: #d85510;
 
-  font-size: 28px;
+  font-size: 30px;
 
-  font-weight: 800;
+  font-weight: 900;
 
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 
   text-transform: uppercase;
+
+  letter-spacing: 1px;
 }
 
 .card p {
@@ -162,47 +181,135 @@ body {
 
   font-size: 16px;
 
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .card span {
-  color: #222;
+  color: #111;
 
-  font-size: 26px;
+  font-size: 34px;
 
-  font-weight: 800;
+  font-weight: 900;
 }
 
+
+
 .brand {
-  margin-top: 20px;
+  margin-top: 24px;
 
   color: #b02a0f;
 
-  font-size: 18px;
+  font-size: 20px;
 
   font-weight: 700;
+
+  padding: 10px 20px;
+
+  background: rgba(216, 85, 16, 0.08);
+
+  border-radius: 50px;
 }
+
 
 
 #prev,
 #next {
-  background: transparent;
+  width: 60px;
+
+  height: 60px;
 
   border: none;
 
-  font-size: 48px;
+  border-radius: 50%;
+
+  background: white;
 
   color: #8b2a10;
 
+  font-size: 30px;
+
   cursor: pointer;
 
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.12);
 }
 
 #prev:hover,
 #next:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 
-  color: #c94918;
+  background: #8b2a10;
+
+  color: white;
 }
 
+
+
+@media (max-width: 900px) {
+  .slider {
+    width: 100%;
+  }
+
+  .card {
+    width: 320px;
+
+    height: 220px;
+  }
+
+  .left-card {
+    transform:
+      translate(-50%, -50%)
+      translateX(-220px)
+      rotateY(25deg)
+      scale(0.8);
+  }
+
+  .right-card {
+    transform:
+      translate(-50%, -50%)
+      translateX(220px)
+      rotateY(-25deg)
+      scale(0.8);
+  }
+
+  .Pri h2 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider-container {
+    gap: 10px;
+  }
+
+  .card {
+    width: 260px;
+
+    height: 200px;
+
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .card span {
+    font-size: 26px;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  #prev,
+  #next {
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 22px;
+  }
+}
